@@ -4,15 +4,15 @@ module Nmapr
       def ping(type)
         case type
         when :disable
-          # In previous versions of Nmap,
-          # -Pn was -P0 and -PN.
           add_argument("-Pn")
         when false
           add_argument("-Pn")
         when :only
           add_argument("-sn")
-        when true
-          add_argument("-sn")
+        when true # defaults
+          add_argument("-PE -PS443 -PA80 -PP")
+        when :enable 
+          add_argument("-PE -PS443 -PA80 -PP")
         when :udp
           add_argument("-PU")
         when :tcp_syn
@@ -33,6 +33,11 @@ module Nmapr
           add_argument("-PR")
         end
       end
+
+      def host_discovery(type)
+        ping(type)
+      end
+
     end
   end
 end
