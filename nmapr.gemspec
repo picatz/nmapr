@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kent 'picat' Gruber"]
   spec.email         = ["kgruber1@emich.edu"]
 
-  spec.summary       = %q{Your friendly neighborhood Ruby DSL to Nmap for network explortation.}
+  spec.summary       = %q{Your friendly neighborhood Ruby DSL to Nmap for network exploration.}
   #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/picatz/nmapr"
   spec.license       = "MIT"
