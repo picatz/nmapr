@@ -4,9 +4,11 @@ module Nmapr
       def ping(type)
         case type
         when :disable
-          add_argument("-PN")
+          # In previous versions of Nmap,
+          # -Pn was -P0 and -PN.
+          add_argument("-Pn")
         when false
-          add_argument("-PN")
+          add_argument("-Pn")
         when :only
           add_argument("-sn")
         when true
