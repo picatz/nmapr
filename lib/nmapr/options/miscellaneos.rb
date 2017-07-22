@@ -32,6 +32,9 @@ module Nmapr
       def just_list 
         add_argument("-sL")
       end
+      
+      alias list_targets just_list
+      alias list_scan    just_list
 
       alias list just_list
 
