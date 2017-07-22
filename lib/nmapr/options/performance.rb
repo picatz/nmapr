@@ -50,7 +50,11 @@ module Nmapr
       end
 
       def host_timeout(value)
-        add_argument("--max-hostgroup " << value.to_s)
+        add_argument("--host-timeout " << value.to_s)
+      end
+      
+      def script_timeout(value)
+        add_argument("--script-timeout " << value.to_s)
       end
       
       def retries(value)
