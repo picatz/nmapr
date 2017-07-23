@@ -17,7 +17,7 @@ module Nmapr
       end
       def list_interfaces
         add_argument("--iflist")
-      edn
+      end
     end
   end
 end
